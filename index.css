@@ -1,3 +1,67 @@
-body {
+*,body {
     margin: 0;
+    box-sizing: border-box;
 } 
+
+/* header */
+.header{
+    width: 600px;
+    height: 167px;
+    margin: auto;
+    background-image: url('images/hamburger.png');
+    color: white;  
+
+}
+
+.h-content-holder{
+    padding: 50px;
+}
+.header-title{
+    margin: 0;
+}
+
+.header-content{    
+    margin-top: 5px;
+}
+
+/* menu items */
+.menu{
+    width: 600px;
+    margin: auto;
+    padding: 30px ;
+   
+}
+.menu-item{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 10px;
+    padding: 30px 0;
+    border-bottom: 0.1px solid rgb(212, 207, 207);
+       
+}
+.menu-img{
+    font-size: 60px;
+}
+.menu-content > h3, p{
+    margin: 0;
+}
+.menu-content .menu-ingredient{
+    font-size: 12px;
+    color: grey;
+    margin-top: 3px;
+}
+.menu-content .menu-price{
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+.menu-add{
+    color: rgb(138, 81, 8);
+    font-size: 25px;
+}
+.menu-icon{
+    margin-left: auto;
+    cursor: pointer;
+}
+
