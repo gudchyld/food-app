@@ -2,14 +2,17 @@ import { menuArray } from "./data.js";
 
 const menu = document.getElementById('menu');
 
+// Event Listeners
 document.addEventListener('click', (e)=> {
   if (e.target.dataset.plus){
   handlePlusClick(e.target.dataset.plus);
+  }else if(e.target.dataset.remove){
+    handleRemoveClick(e.target.dataset.remove);
   }
 })
 
+//function to handle an event when the plus button is clicked
 let menuArr = menuArrayWithCount()
-
 function handlePlusClick(id) {
   let itemValue=``
   let cumPrices = 0;
@@ -24,8 +27,9 @@ function handlePlusClick(id) {
       item.count++
       item.totalPrice += item.price
       itemValue += `
-              <div class='payout-menu'>
-                <p>${item.name}</p>
+              <div class='payout-menu' id='payout-menu'>
+                <p class='pm-name'>${item.name}</p>
+                <p class='pm-remove' data-remove='${item.id}' >remove</p>
                 <p class='pm-total' id='${item.id}'>${item.price}</p>
                 
               </div>
@@ -34,6 +38,8 @@ function handlePlusClick(id) {
   })
   
   document.getElementById('payout-items').innerHTML += itemValue
+  document.getElementById(id).parentElement.classList.remove('unshow')
+  
   
   let tClass = document.querySelectorAll('.pm-total');
   
@@ -42,6 +48,12 @@ function handlePlusClick(id) {
   }
   
   document.getElementById('pt-amount').textContent = cumPrices;
+}
+
+//function to handle an event when the remove button is clicked
+function handleRemoveClick(id){
+    document.getElementById(id).parentElement.classList.add('unshow')
+
 }
 
 function menuArrayWithCount(){

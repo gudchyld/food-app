@@ -60,6 +60,10 @@
     color: rgb(138, 81, 8);
     font-size: 25px;
 }
+
+.menu-add:hover{
+    color: orange;
+}
 .menu-icon{
     margin-left: auto;
     cursor: pointer;
@@ -69,22 +73,32 @@
 .payout{
   width: 600px;
   margin: auto;
-  margin-top: 30px;
+  margin-top: 20px;
   
 }
-.btn-h{
+.payout-title{
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-size: larger;
+}
+.btn-holder{
   text-align:center;
 }
 
 .btn-p{
-  padding: 8px 20px;
-  background: white;
+  padding: 8px 30px;
+  background: rgb(138, 81, 8);;
   border: 2px solid rgb(138, 81, 8); 
   font-weight: bold;
   border-radius: 5px;
   font-size: 18px;
   margin-top: 20px;
+  margin-bottom: 20px;
+  color: white;
+  cursor: pointer;
 }
+
 .payout-total{
   display: flex;
   justify-content: space-between;
@@ -92,13 +106,34 @@
   padding: 20 8px;
   font-size: 18px;
   font-weight: bold;
-  border-top: 1px solid gray;
-  border-bottom: 1px solid gray;   
+  border-top: 2px solid gray;
+  /* border-bottom: 1px solid gray;    */
 }
 .payout-menu{
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  align-items: center;
   margin: 5px 40px;
-  padding: 10px 5px 10px 9px;
+  padding: 8px 5px 8px 9px;
+  gap: 10px;
+}
+
+.pm-total{
+    margin-left: auto;
+}
+.pm-name{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.pm-remove{
+    font-size: 12px;
+    cursor: pointer;
+}
+.pm-remove:hover{
+    color: red;
+}
+.unshow{
+    display: none;
 }
 
