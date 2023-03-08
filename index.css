@@ -64,4 +64,41 @@
     margin-left: auto;
     cursor: pointer;
 }
+/* payout section */
+
+.payout{
+  width: 600px;
+  margin: auto;
+  margin-top: 30px;
+  
+}
+.btn-h{
+  text-align:center;
+}
+
+.btn-p{
+  padding: 8px 20px;
+  background: white;
+  border: 2px solid rgb(138, 81, 8); 
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 18px;
+  margin-top: 20px;
+}
+.payout-total{
+  display: flex;
+  justify-content: space-between;
+  margin: 10 40px;
+  padding: 20 8px;
+  font-size: 18px;
+  font-weight: bold;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;   
+}
+.payout-menu{
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 40px;
+  padding: 10px 5px 10px 9px;
+}
 
