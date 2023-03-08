@@ -56,6 +56,7 @@ function handleRemoveClick(id){
 
 }
 
+//reformat menuArray to have additonal object properties
 function menuArrayWithCount(){
   let newArr = menuArray.map(item => {
     return {...item, 'count': 0, 'totalPrice': 0
