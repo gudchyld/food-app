@@ -17,13 +17,28 @@
         <!-- food items here -->
       </main>
       
+      <!--Modal-->
+      <section class="modal-con">
+        <div class="modal">
+          <form class="modal-form">
+            <input type="text" placeholder="First Name" required>
+            <input type="text" placeholder="Last Name" required>
+            <input type="email" name="mail" id="mail" placeholder="Email">
+            <input class="modal-btn" type="submit" value="Pay Out">
+          </form>
+        </div>
+      </section>
+      
       <!-- complete order -->
       <aside class="payout" id="payout">
         <div class="payout-title">Your Order</div>
         <div class="payout-items" id="payout-items"><!-- Order Here --></div>
         <div class="payout-total">
           <p>Total</p>
-          <p id="pt-amount"></p>
+          <div class="pta-holder">
+          <p class="pt-unit">$</p>
+          <p id="pt-amount">0</p>
+          </div>
         </div>
         
        <div class="btn-holder"><button class="btn-p">Complete Order</button></div>

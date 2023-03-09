@@ -68,6 +68,7 @@
     margin-left: auto;
     cursor: pointer;
 }
+
 /* payout section */
 
 .payout{
@@ -88,7 +89,7 @@
 
 .btn-p{
   padding: 8px 30px;
-  background: rgb(138, 81, 8);;
+  background: saddlebrown;
   border: 2px solid rgb(138, 81, 8); 
   font-weight: bold;
   border-radius: 5px;
@@ -107,11 +108,9 @@
   font-size: 18px;
   font-weight: bold;
   border-top: 2px solid gray;
-  /* border-bottom: 1px solid gray;    */
 }
 .payout-menu{
   display: flex;
-  /* justify-content: space-between; */
   align-items: center;
   margin: 5px 40px;
   padding: 8px 5px 8px 9px;
@@ -120,6 +119,11 @@
 
 .pm-total{
     margin-left: auto;
+}
+
+.pta-holder{
+  display:flex;
+  
 }
 .pm-name{
     font-weight: bold;
@@ -137,3 +141,54 @@
     display: none;
 }
 
+/* modal */
+.modal-btn{
+  
+}
+
+.modal-con{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  
+  
+}
+.modal{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  
+  width: 400px;
+  height: 400px;
+  border: 2px solid saddlebrown;
+  padding: 20px;
+  background: floralwhite;
+}
+.modal-form{
+  display: flex;
+  flex-direction: column;
+}
+input[type='text'], input[type='email']{
+  padding:5px 10px;
+  margin-bottom: 8px;
+  font-size: 20px;
+  border-radius: 5px;
+}
+input[type='submit']{
+  margin-top: 10px;
+  background: saddlebrown;
+  color: white;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 5px;
+}
