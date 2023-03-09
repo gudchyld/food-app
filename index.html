@@ -18,12 +18,13 @@
       </main>
       
       <!--Modal-->
-      <section class="modal-con">
+      <section class="modal-con" id="modal-con">
         <div class="modal">
+          <div><i class="fa-regular fa-circle-xmark modal-close" id="modal-close"></i></div>
           <form class="modal-form">
-            <input type="text" placeholder="First Name" required>
-            <input type="text" placeholder="Last Name" required>
-            <input type="email" name="mail" id="mail" placeholder="Email">
+            <input type="text" placeholder="Enter your name" required>
+            <input type="number" placeholder="Enter card number" required>
+            <input type="number" name="cvv" id="cvv" placeholder="Enter cvv">
             <input class="modal-btn" type="submit" value="Pay Out">
           </form>
         </div>
@@ -41,7 +42,7 @@
           </div>
         </div>
         
-       <div class="btn-holder"><button class="btn-p">Complete Order</button></div>
+       <div class="btn-holder"><button class="btn-p" id="btn-p">Complete Order</button></div>
        
       </aside>
     </div>

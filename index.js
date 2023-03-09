@@ -9,6 +9,11 @@ document.addEventListener('click', (e)=> {
   handlePlusClick(e.target.dataset.plus);
   }else if(e.target.dataset.remove){
     handleRemoveClick(e.target.dataset.remove);
+  }else if(e.target.id === 'btn-p'){
+    document.getElementById('modal-con').style.display = 'flex'
+  }
+  else if(e.target.id ==='modal-close'){
+    document.getElementById('modal-con').style.display = 'none'
   }
 })
 
