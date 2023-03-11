@@ -169,6 +169,7 @@ body{
 }
 .modal{
   display: flex;
+  flex-direction: column;
   position: relative;
   justify-content: center;
   align-items: center;
@@ -178,6 +179,13 @@ body{
   border: 2px solid saddlebrown;
   padding: 20px;
   background: floralwhite;
+  box-shadow: 0 12px 80px 40px rgba(0, 0, 0, 0.4), 0 6px 90px 80px  rgba(0, 0, 0, 0.19);;
+}
+.modal-title{
+    margin-bottom: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    
 }
 
 .modal-close{
@@ -225,4 +233,16 @@ input[type='submit']{
   font-weight: bold;
   border-radius: 5px;
   cursor: pointer;
+}
+
+/* Final appreciation message */
+.appreciation{
+    background-color: rgb(199, 129, 79);
+    width: 500px;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 5px;
+    color: rgb(241, 236, 236);
+    text-align: center;
+    font-size: 18px;
 }

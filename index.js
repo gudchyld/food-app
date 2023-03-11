@@ -2,6 +2,8 @@ import { menuArray } from "./data.js";
 
 const menu = document.getElementById('menu');
 const ptAmount = document.getElementById('pt-amount');
+const formElem = document.getElementById('modal-form');
+const payOut = document.getElementById('payout')
 
 // Event Listeners
 document.addEventListener('click', (e)=> {
@@ -9,13 +11,32 @@ document.addEventListener('click', (e)=> {
   handlePlusClick(e.target.dataset.plus);
   }else if(e.target.dataset.remove){
     handleRemoveClick(e.target.dataset.remove);
-  }else if(e.target.id === 'btn-p'){
+  }else if(e.target.id === 'btn-p' ){
     document.getElementById('modal-con').style.display = 'flex'
   }
-  else if(e.target.id ==='modal-close'){
+  else if(e.target.id ==='modal-close' || !e.target.closest(".modal")){
     document.getElementById('modal-con').style.display = 'none'
   }
 })
+
+//handle formData event
+formElem.addEventListener('submit', (e) => {
+  
+    // on form submission, prevent default
+    e.preventDefault();
+  
+    // construct a FormData object, which fires the formdata event
+   let formData =  new FormData(formElem);
+   let userName = formData.get("user-name")
+
+   payOut.innerHTML = `<div class="appreciation" id="appreciation">
+    <p>Thanks ${userName}, your order is on the way!</p>
+   </div>`
+   document.getElementById('modal-con').style.display = 'none'
+    
+  });
+
+
 
 //function to handle an event when the plus button is clicked
 let menuArr = menuArrayWithCount()
