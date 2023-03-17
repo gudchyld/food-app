@@ -75,6 +75,14 @@ body{
 .menu-add:hover{
     color: orange;
 }
+
+.menu-minus{
+    /* color: orange; */
+    margin-right: 8px;
+}
+.menu-minus:hover{
+    color: red;
+}
 .menu-icon{
     margin-left: auto;
     cursor: pointer;
