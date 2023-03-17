@@ -16,6 +16,7 @@ body{
 
 /* header */
 .header{
+    position: relative;
     width: 600px;
     height: 167px;
     margin: auto;
@@ -266,8 +267,10 @@ input[type='submit']{
     height: 30px;
     border-radius: 20px;
     position: absolute;
-    top: 10;
-    right: 30;
+    top: 20px;
+    right: 30px;
+    left: auto;
+    bottom: auto;
 }
 .inner-dark{
     height: 30px;
