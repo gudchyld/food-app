@@ -4,6 +4,10 @@ const menu = document.getElementById('menu');
 const ptAmount = document.getElementById('pt-amount');
 const formElem = document.getElementById('modal-form');
 const payOut = document.getElementById('payout');
+const darkness = document.getElementById('darkness');
+const innerDark = document.getElementById('inner-dark');
+const container = document.getElementById('container');
+const modal = document.getElementById('modal');
 
 // Event Listeners
 document.addEventListener('click', (e) => {
@@ -121,8 +125,8 @@ function displayMenuItems() {
                         <p class="menu-price">$${item.price}</p>
                     </div>
                     <div class="menu-icon">
-                    <i class="fa-solid fa-minus menu-add menu-minus" data-minus='${item.id}'></i>
-                    <i class="fa-solid fa-plus menu-add" data-plus='${item.id}'></i>
+                    <i class="fa-solid fa-minus menu-add menu-minus" data-minus='${item.id}' id='minus'></i>
+                    <i class="fa-solid fa-plus menu-add" data-plus='${item.id}' id='plus'></i>
                     </div>
             </div>`;
   });
@@ -132,3 +136,27 @@ function render() {
   menu.innerHTML = displayMenuItems();
 }
 render();
+
+// The power of darkness
+darkness.addEventListener('click', () => {
+  innerDark.classList.toggle('dark-mode')
+  darkness.classList.toggle('darkness-dark')
+  container.classList.toggle('dark-container');
+  // the darkness continues
+  document.querySelectorAll('#plus').forEach(item => {
+    item.classList.toggle('light-brown');
+  })
+  document.querySelectorAll('#minus').forEach(item => {
+    item.classList.toggle('light-brown');
+  })
+  modal.classList.toggle('dark-modal');
+
+  document.querySelectorAll('.form-input').forEach(item => {
+    item.classList.toggle('dark-input');
+  })
+  document.querySelector('input[type="text"]').style.border = '2px solid rgb(153, 141, 122)'
+  document.querySelectorAll('input[type="number"]').forEach(item => {
+    item.style.border = '2px solid rgb(153, 141, 122)'
+  })
+
+})

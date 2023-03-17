@@ -1,7 +1,6 @@
 * {
     margin: 0;
-    box-sizing: border-box;
-   
+    box-sizing: border-box;   
 } 
 body{
     background-color: rgb(14, 6, 1);
@@ -13,6 +12,7 @@ body{
     margin: auto;
     background-color: white;
 }
+
 
 /* header */
 .header{
@@ -217,13 +217,13 @@ input[type='text'], input[type='number']{
   border-radius: 5px;
   border: 1px solid saddlebrown;
 }
-input[type='text']::placeholder{
+.form-input::placeholder{
     opacity: 40%;
     color: rgb(39, 19, 4);
     font-size: 14px;
     padding: 5px;
 }
-input[type='number']::placeholder{
+.form-input::placeholder{
     opacity: 40%;
     color: rgb(37, 18, 4);
     font-size: 14px;
@@ -253,4 +253,54 @@ input[type='submit']{
     color: rgb(241, 236, 236);
     text-align: center;
     font-size: 18px;
+}
+
+/* darkness */
+.dark-container{
+    background-color: #221911;
+    color: rgb(226, 218, 218);
+}
+.darkness{
+    width: 60px;
+    background-color: white;
+    height: 30px;
+    border-radius: 20px;
+    position: absolute;
+    top: 10;
+    right: 30;
+}
+.inner-dark{
+    height: 30px;
+    background-color: rgb(61, 25, 3);
+    width: 50%;
+    border-radius: 50%;
+    
+}
+
+.darkness-dark{
+    background-color: rgb(61, 25, 3);
+}
+.dark-mode{
+    margin-left: auto;
+    background-color: white;
+}
+
+.light-brown{
+    color: rgb(240, 209, 168);
+}
+.dark-modal{
+    color: white;
+    background-color: #221911;
+    border: 2px solid rgb(153, 141, 122);
+}
+
+.dark-input{
+    background-color:#221911; 
+    color: rgb(219, 210, 200);
+    outline: none;
+    border: 2px solid whitesmoke;
+    
+}
+.dark-input::-webkit-input-placeholder {
+    color: white;
 }

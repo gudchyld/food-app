@@ -5,8 +5,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
-    <div class="container">
+    <div class="container " id="container">
       <header class="header">
+
+        <!-- Darkness Switch -->
+        <div class="darkness" id="darkness">
+          <div class="inner-dark " id="inner-dark"></div>
+        </div>
         <div class="h-content-holder">
           <h2 class="header-title">Elendu's Diner</h2>
           <p class="header-content">The best burgers and pizzas in town</p>
@@ -19,13 +24,13 @@
       
       <!--Modal-->
       <section class="modal-con" id="modal-con">
-        <div class="modal">
+        <div class="modal" id="modal">
           <div class="modal-title">Enter card details</div>
           <div><i class="fa-regular fa-circle-xmark modal-close" id="modal-close"></i></div>
           <form class="modal-form" id="modal-form">
-            <input type="text" name="user-name" placeholder="Enter your name" required>
-            <input type="number" placeholder="Enter card number" required>
-            <input type="number" name="cvv" id="cvv" placeholder="Enter cvv">
+            <input class="form-input" type="text" name="user-name" placeholder="Enter your name" required>
+            <input class="form-input" type="number" placeholder="Enter card number" required>
+            <input class="form-input" type="number" name="cvv" id="cvv" placeholder="Enter cvv">
             <input class="modal-btn" type="submit" value="Pay Out">
           </form>
         </div>
