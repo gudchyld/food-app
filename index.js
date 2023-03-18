@@ -17,7 +17,7 @@ document.addEventListener('click', (e) => {
     handleMinusClick(e.target.dataset.minus);
   } else if (e.target.dataset.remove) {
     handleRemoveClick(e.target.dataset.remove);
-  } else if (e.target.id === 'btn-p') {
+  } else if (e.target.id === 'btn-p' && Number(ptAmount.textContent) > 0) {
     document.getElementById('modal-con').style.display = 'flex';
   } else if (e.target.id === 'modal-close' || !e.target.closest('.modal')) {
     document.getElementById('modal-con').style.display = 'none';
