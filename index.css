@@ -160,6 +160,7 @@ body{
 .unshow{
     display: none;
 }
+.no-click{pointer-events: none;}
 
 /* modal */
 

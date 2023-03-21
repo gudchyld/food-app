@@ -8,12 +8,20 @@ const darkness = document.getElementById('darkness');
 const innerDark = document.getElementById('inner-dark');
 const container = document.getElementById('container');
 const modal = document.getElementById('modal');
+const minusMenu = document.querySelectorAll(".menu-minus");
 
 // Event Listeners
 document.addEventListener('click', (e) => {
   if (e.target.dataset.plus) {
     handlePlusClick(e.target.dataset.plus);
+
   } else if (e.target.dataset.minus) {
+
+    // menuArr.forEach(item => {
+    //   if(e.target.dataset.minus == item.id && item.totalPrice <= item.price)
+    //     e.target.style.display = 'none'
+    // })
+
     handleMinusClick(e.target.dataset.minus);
   } else if (e.target.dataset.remove) {
     handleRemoveClick(e.target.dataset.remove);
@@ -88,16 +96,18 @@ function handleRemoveClick(id) {
 //This function deducts from the total amount of a particular item in the cart by the item price
 function handleMinusClick(id) {
   menuArr.forEach((item) => {
-    if (id == item.id && item.totalPrice <= item.price) {      
+    if (id == item.id && item.totalPrice == item.price) {
       cumPrices -= item.totalPrice;
       item.totalPrice -= item.price;
       document.getElementById(id).parentElement.classList.add('unshow');
-    }else if(id == item.id && item.totalPrice > item.price){
+
+
+    } else if (id == item.id && item.totalPrice > item.price) {
       item.totalPrice -= item.price;
       cumPrices -= item.price;
       document.getElementById(`${id}`).textContent = `${item.totalPrice}`;
     }
-    
+
 
   });
 
